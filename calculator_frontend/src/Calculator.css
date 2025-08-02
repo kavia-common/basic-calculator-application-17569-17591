@@ -1,0 +1,187 @@
+.calculator {
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  max-width: 320px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+}
+
+.calculator-display {
+  background-color: #000000;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.display-value {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 100%;
+}
+
+.calculator-keypad {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.calculator-row {
+  display: flex;
+  gap: 12px;
+}
+
+.calculator-key {
+  flex: 1;
+  height: 70px;
+  border: none;
+  border-radius: 35px;
+  font-size: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  outline: none;
+  user-select: none;
+}
+
+.calculator-key:active {
+  transform: scale(0.95);
+}
+
+/* Digit keys */
+.key-digit {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.key-digit:hover {
+  background-color: #404040;
+}
+
+/* Zero key spans two columns */
+.key-zero {
+  flex: 2;
+  border-radius: 35px;
+}
+
+/* Operator keys */
+.key-operator {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+.key-operator:hover {
+  background-color: #ffad33;
+}
+
+/* Function keys (Clear, Sign, Percent) */
+.key-clear,
+.key-sign,
+.key-percent {
+  background-color: #a6a6a6;
+  color: #000000;
+}
+
+.key-clear:hover,
+.key-sign:hover,
+.key-percent:hover {
+  background-color: #b8b8b8;
+}
+
+/* Equals key */
+.key-equals {
+  background-color: #ff9500;
+  color: #ffffff;
+}
+
+.key-equals:hover {
+  background-color: #ffad33;
+}
+
+/* Responsive design for mobile devices */
+@media (max-width: 480px) {
+  .calculator {
+    max-width: 280px;
+    padding: 15px;
+    margin: 10px;
+  }
+  
+  .calculator-display {
+    padding: 15px;
+    min-height: 50px;
+  }
+  
+  .display-value {
+    font-size: 2rem;
+  }
+  
+  .calculator-key {
+    height: 60px;
+    font-size: 1.3rem;
+  }
+  
+  .calculator-row {
+    gap: 10px;
+  }
+  
+  .calculator-keypad {
+    gap: 10px;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 360px) {
+  .calculator {
+    max-width: 260px;
+    padding: 12px;
+  }
+  
+  .calculator-key {
+    height: 55px;
+    font-size: 1.2rem;
+  }
+  
+  .display-value {
+    font-size: 1.8rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 768px) {
+  .calculator {
+    max-width: 360px;
+    padding: 25px;
+  }
+  
+  .calculator-display {
+    padding: 25px;
+    min-height: 70px;
+  }
+  
+  .display-value {
+    font-size: 3rem;
+  }
+  
+  .calculator-key {
+    height: 80px;
+    font-size: 1.7rem;
+  }
+  
+  .calculator-row {
+    gap: 15px;
+  }
+  
+  .calculator-keypad {
+    gap: 15px;
+  }
+}
